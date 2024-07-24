@@ -72,4 +72,23 @@ public class Department {
 		return sum;
 	}
 	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("FOLHA DE PAGAMENTO: \n");
+		sb.append("Departamento " +  getName() + " = R$ " + payroll() + "\n");
+		sb.append("Pagamento realizado no dia " + payDay + "\n");
+		sb.append("Funcionários: \n");
+		sb.append("---------------------------------------------------------\n");
+		for (Employee e : employees) {
+			sb.append(e.getName() + "\n");
+		}
+		
+		sb.append("---------------------------------------------------------\n");
+		sb.append("Para dúvidas favor entrar em contato: " + address.getEmail());
+		
+		return sb.toString();
+		
+	}
+	
 }
