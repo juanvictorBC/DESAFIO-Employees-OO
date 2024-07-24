@@ -1,6 +1,6 @@
 package entities;
 
-public class Employee extends Department {
+public class Employee {
 	
 	private String name;
 	private double salary;

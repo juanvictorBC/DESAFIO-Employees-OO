@@ -12,17 +12,17 @@ public class Department {
 	
 	private Address address;
 	
+	private List<Employee> employees = new ArrayList<>();
+	
 	public Department() {
 	}
 
-	public Department(String name, int payDay, Employee employee, Address address) {
+	public Department(String name, int payDay, Address address) {
 		this.name = name;
 		this.payDay = payDay;
-		this.employee = employee;
 		this.address = address;
 	}
 	
-	List<Employee> employees = new ArrayList<>();
 
 	public String getName() {
 		return name;
@@ -67,7 +67,7 @@ public class Department {
 	public double payroll() {
 		double sum = 0;
 		for (Employee e : employees) {
-			sum = e.getSalary() + e.getSalary();
+			sum += e.getSalary();
 		}
 		return sum;
 	}
